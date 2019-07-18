@@ -1,0 +1,8 @@
+selenium
+testrail
+pytest
+py-html
+pytest-ordering
+pytest-metadata
+python-dotenv
+ddt
