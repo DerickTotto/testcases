@@ -3,9 +3,7 @@ from selenium import webdriver
 import time
 driverLocation = "..\\..\\drivers\\chromedriver.exe"
 os.environ["webdriver.chrome.driver"] = driverLocation
-driver = webdriver.Chrome(driverLocation)
-
-
+driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://onecampus.laureate.net/#/home")
 time.sleep(2)
