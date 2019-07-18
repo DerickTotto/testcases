@@ -1,21 +1,9 @@
 import os
 from selenium import webdriver
 import time
-"""
-cur_path = os.path.dirname(__file__)
-new_path = os.path.relpath("..\\..\\drivers\\phantomjs.exe", cur_path)
-os.environ["webdriver.chrome.driver"] = new_path
-driver = webdriver.PhantomJS(new_path)
-driver.get("https://www.google.com/")
-driver.save_screenshot("prueba phantom.png")
-
-options = webdriver.FirefoxOptions()
-options.add_argument('--headless')
-driver = webdriver.Firefox(options=options)
-"""
-driverLocation = "..\\..\\drivers\\headless_ie_selenium.exe"
-os.environ["webdriver.ie.driver"] = driverLocation
-driver = webdriver.Ie(driverLocation)
+driverLocation = "..\\..\\drivers\\chromedriver.exe"
+os.environ["webdriver.chrome.driver"] = driverLocation
+driver = webdriver.Chrome(driverLocation)
 
 
 driver.maximize_window()
