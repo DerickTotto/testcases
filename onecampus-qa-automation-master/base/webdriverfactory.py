@@ -39,9 +39,11 @@ class WebDriverFactory():
             # options.binary_location = "..\\drivers\\chromedriver"
             driver = webdriver.Chrome()
         else:
+            driverLocation = "..\\..\\drivers\\chromedriver.exe"
+            os.environ["webdriver.ie.driver"] = driverLocation
             options = webdriver.ChromeOptions()
             options.add_argument('headless')
-            driver = webdriver.Chrome(options=options)
+            driver = webdriver.Chrome(driverLocation, options=options)
         # Setting Driver Implicit Time out for An Element
         driver.implicitly_wait(3)
         # Maximize the window
